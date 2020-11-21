@@ -22,5 +22,21 @@ module.exports = {
         path:`%{_dir}/src/images`
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve:`gatsby-pugin-mdx`,
+      options:{
+        extension:[`.md`,`.mdx`],
+        gatsbyRemarkPlugins:[
+          {
+            resolve:`gatsby-remark-images`,
+            options:{
+              maxWidth:1200,
+            }
+          }
+        ]
+      }
+    }
   ],
 }
